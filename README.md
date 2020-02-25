@@ -30,7 +30,7 @@ There are no known bugs at this time.
 
 ## Support and contact details
 
-_Contact via email: szopiks@yahoo.com
+Contact via email: szopiks@yahoo.com
 
 ## Technologies Used
 
