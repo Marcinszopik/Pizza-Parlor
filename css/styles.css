@@ -6,3 +6,32 @@ body {
     background-position: center;
     height: 100%;
 }
+
+h1 {
+    font-size: xx-large;
+    color: orangered;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h3 {
+    font-size: large;
+    color: orangered;
+    text-align: center;
+    margin-top: 50px;
+}
+
+P {
+    text-align: center;
+    color: wheat;
+    margin-top: 100px;
+    margin-right: 125px;
+}
+
+ul {
+    text-align: match-parent;
+    color: wheat;
+    margin-left: 200px;
+    list-style: none;
+}
+
