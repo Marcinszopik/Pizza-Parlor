@@ -7,6 +7,10 @@ body {
     height: 100%;
 }
 
+div {
+    display: block;
+}
+
 h1 {
     font-size: xx-large;
     color: orangered;
@@ -18,14 +22,14 @@ h3 {
     font-size: large;
     color: orangered;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
-P {
+p {
     text-align: center;
     color: wheat;
     margin-top: 100px;
-    margin-right: 125px;
+
 }
 
 ul {
@@ -35,3 +39,15 @@ ul {
     list-style: none;
 }
 
+li {
+    text-align: start;
+    margin: initial;
+}
+
+.toppings {
+    margin-right: 250px;
+}
+
+.sizes {
+    margin-right: 220px;
+}
