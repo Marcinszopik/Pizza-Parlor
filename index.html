@@ -1,7 +1,5 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/scripts.js" charset="utf-8"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -10,24 +8,28 @@
 </head>
 <body>
     <h1>Welcome to The Pizza Parlor</h1> 
+<div>
+ <p class="sizes">Choose Your Size of Pizza:</p>
+    <ul>
+       <li id="pizzaSize">Small</li>
+       <li id="pizzaSize">Medium</li>
+       <li id="pizzaSize">Large</li>
+   </ul>
 
-<p>Allow a user to choose 1+ toppings:</p> 
- <ul>
-     <li>cheese</li>
-     <li>pepperoni</li>
-     <li>veggie</li>
-     <li>olives</li>
- </ul> 
- 
+<p class="toppings">Choose Your Topping:</p> 
+     <ul>
+        <li id="cheese">Cheese</li>
+        <li id="meatToppings">Pepperoni</li>
+        <li id="meatToppings">Sausag</li>
+        <li id="vegToppings">Broccolli</li>
+        <li id="vegToppings">Olives</li>
+        <li id="vegToppings">Mushrooms</li>
+    </ul> 
+</div>
 
- <p>Allow different sizes:</p>
- <ul>
-    <li>small</li>
-    <li>medium</li>
-    <li>large</li>
-</ul>
 
-<h3> Need a Pizza object constructer with properties for toppings and sizes</h3>
+
+<h3> Need a Pizza object constructor with properties for toppings and sizes</h3>
 <h3> Need to create a prototype method for the CoSt of the pizza depending on the selections chosen</h3>
 
 
