@@ -1,39 +1,59 @@
-// Business Logic
-    var pizzaSize = ["small", "medium", "large"];
-    var sizePrice = [ 8.00, 10.00, 12.00];
+function Pizza(size, price) {
+  this.size = size;
+  this.price = price;
+  this.toppings = [];
+}
+Pizza.prototype.addToppings = function(topping) {
+  this.toppings.push(topping);
+};
 
-    var meatToppings = ["Pepperoni", "Sausage"];
-    var meatPrice = [1.50, 1.25];
+Pizza.prototype.getTotalPrice = function() {
+  let total = 0;
+  for (let i = 0; i < this.toppings.length; i++) {
+    total = total + this.toppings[i].price;
+  }
+  return total + this.price;
+};
 
-    var vegToppings = ["Broccolli", "Olives", "Mushrooms"];
-    var vegPrice = []
+var readyMadePizza = "15";
+$(document).ready(function() {
+  // for readyMadePizza
+  $("#ready").click(function() {
+    $("#price").empty();
+    $("#price").append(readyMadePizza);
+    $(".order").show();
+  });
 
-    function Pizza(){
-        this.pizzaSize;
-        this.meatToppings = [];
-        this.vegToppings =[];
-        this.sizePrice = 0;
+  // for customizePizza
+  $("#customize").click(function() {
+    $(".mainpage").hide();
+    $(".order").hide();
+    $(".custom").show();
+  });
+
+  $("#checkoutButton").click(function() {
+    $("#price").empty();
+    // for getting radio button value
+    let sizeEl = $('input[name="size"]:checked');
+    // getting the value form checkbox
+    let selectedToppings = Array.from($(".toppings:checked")).map(topping =>
+      $(topping).data()
+    );
+    const pizza = new Pizza(sizeEl.val(), sizeEl.data("price"));
+    selectedToppings.forEach(topping => pizza.addToppings(topping));
+
+    if (sizeEl.length === 0) {
+      alert("Please select size.");
+    } else {
+      $("#price").append(pizza.getTotalPrice());
+      $(".order").show();
     }
-
-// Pizza Constructor, represents a single pizza
-    function Pizza(pizzaSize, Cheese) {
-    this.pizzaSize = pizzaSize;
-    this.cheese = Cheese;
-    this.meatToppings = Pepperoni;
-    this.vegToppings = Mushrooms;
-    }
-
-    Pizza.prototype.chooseSize = function(size,price){
-        this.pizzaSize = size;
-        this.price = price;
-        $("#pizzaSize").text("Size: " + size);
-        $("#pizzaSizeButtons").toggle();
-        $("#pizzaToppings").toggle();
-      }
-      
-      Pizza.prototype.printToppings = function(){
-        $("#toppingList").empty();
-        for(i=0;i<this.toppings.length;i++){
-          $("#toppingList").append("<li>" + this.toppings[i]+ "</li>");
-        }
-      }
+  });
+  // thank you page
+  $(".place-order").click(function() {
+    $(".order").hide();
+    $(".custom").hide();
+    $(".mainpage").hide();
+    $(".thanks").show();
+  });
+});
