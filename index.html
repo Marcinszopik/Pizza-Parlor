@@ -11,23 +11,26 @@
 <div>
  <p class="sizes">Choose Your Size of Pizza:</p>
     <ul>
-       <li id="pizzaSize">Small</li>
-       <li id="pizzaSize">Medium</li>
-       <li id="pizzaSize">Large</li>
+       <li id="pizzaSize"><input type="radio" name="size" value="8"> Small</li>
+       <li id="pizzaSize"><input type="radio" name="size" value="10"> Medium</li>
+       <li id="pizzaSize"><input type="radio" name="size" value="12"> Large</li>
+       <input type="hidden" name="sz_tot" value="0.00" />       
+
    </ul>
 
 <p class="toppings">Choose Your Topping:</p> 
      <ul>
-        <li id="cheese">Cheese</li>
-        <li id="meatToppings">Pepperoni</li>
-        <li id="meatToppings">Sausag</li>
-        <li id="vegToppings">Broccolli</li>
-        <li id="vegToppings">Olives</li>
-        <li id="vegToppings">Mushrooms</li>
+        <li id="cheese"><input type="checkbox">Cheese</li>
+        <li id="meatToppings"><input type="checkbox">Pepperoni</li>
+        <li id="meatToppings"><input type="checkbox">Sausag</li>
+        <li id="vegToppings"><input type="checkbox">Broccolli</li>
+        <li id="vegToppings"><input type="checkbox">Olives</li>
+        <li id="vegToppings"><input type="checkbox">Mushrooms</li>
     </ul> 
 </div>
+       
 
-
+<p><label>Total: $ <input type="text" name="total" class="num" value="0.00" readonly="readonly" /></label></p>
 
 <h3> Need a Pizza object constructor with properties for toppings and sizes</h3>
 <h3> Need to create a prototype method for the CoSt of the pizza depending on the selections chosen</h3>
