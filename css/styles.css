@@ -5,11 +5,9 @@ body {
     background-size: cover;
     background-position: center;
     height: 100%;
+    color: white;
 }
 
-div {
-    display: block;
-}
 
 h1 {
     font-size: xx-large;
@@ -42,12 +40,19 @@ ul {
 li {
     text-align: start;
     margin: initial;
+    position: relative;
+    list-style-position: inside;
 }
 
 .toppings {
-    margin-right: 250px;
+    margin-right: 5px;
 }
 
-.sizes {
+.size {
     margin-right: 220px;
+}
+
+.sidenavorder {
+    margin-top: 10px;
+    text-align: center;
 }
