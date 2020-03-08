@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/scripts.js" charset="utf-8"></script>
@@ -6,36 +7,55 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Pizza Parlor</title>
 </head>
+
 <body>
-    <h1>Welcome to The Pizza Parlor</h1> 
-<div>
- <p class="sizes">Choose Your Size of Pizza:</p>
-    <ul>
-       <li id="pizzaSize"><input type="radio" name="size" value="8"> Small</li>
-       <li id="pizzaSize"><input type="radio" name="size" value="10"> Medium</li>
-       <li id="pizzaSize"><input type="radio" name="size" value="12"> Large</li>
-       <input type="hidden" name="sz_tot" value="0.00" />       
+    <div class="container">
+    <h1>Welcome to The Pizza Parlor</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Choose Your Size of Pizza:</h3>
+                <form id="size">
+                    <input type="radio" id="small" name="size" value="small" data-name="small" data-price="10" />
+                    <label for="small">Small ($10)</label><br />
+                    <input type="radio" id="medium" name="size" value="medium" data-name="medium" data-price="12" />
+                    <label for="medium">Medium ($12)</label><br />
+                    <input type="radio" id="large" name="size" value="large" data-name="large" data-price="14" />
+                    <label for="large">Large ($14)</label>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3>Choose Your Topping:</h3>
+            <form id="items">
+                <input type="checkbox" value="cheese" class="toppings" data-price="2"><label for="cheese">Cheese
+                    +2</label><br>
+                <input type="checkbox" value="Pepperoni" class="toppings" data-price="1"><label
+                    for="Pepperoni">Pepperoni +1</label><br>
+                <input type="checkbox" value="Sausage" class="toppings" data-price="1"><label for="Sausage">Sausage
+                    +1</label><br>
+                <input type="checkbox" value="Olives" class="toppings" data-price="1"><label for="Olives">Olives
+                    +1</label><br>
+                <input type="checkbox" value="Mushrooms" class="toppings" data-price="2"><label
+                    for="Mushrooms">Mushrooms +2</label><br>
 
-   </ul>
+            </form>
+        </div>
 
-<p class="toppings">Choose Your Topping:</p> 
-     <ul>
-        <li id="cheese"><input type="checkbox">Cheese</li>
-        <li id="meatToppings"><input type="checkbox">Pepperoni</li>
-        <li id="meatToppings"><input type="checkbox">Sausag</li>
-        <li id="vegToppings"><input type="checkbox">Broccolli</li>
-        <li id="vegToppings"><input type="checkbox">Olives</li>
-        <li id="vegToppings"><input type="checkbox">Mushrooms</li>
-    </ul> 
-</div>
-       
+        <button id="checkoutButton" class="bg-danger" type="submit">I'm Done</button>
 
-<p><label>Total: $ <input type="text" name="total" class="num" value="0.00" readonly="readonly" /></label></p>
 
-<h3> Need a Pizza object constructor with properties for toppings and sizes</h3>
-<h3> Need to create a prototype method for the CoSt of the pizza depending on the selections chosen</h3>
+    </div>
+    </div>
+    <bt></bt>
 
+    <!-- order summary -->
+    <div class="sidenavorder">
+        <h3>Order summary</h3>
+        <div><strong>Your Total: </strong> $<span id="price"></span></div>
+
+    </div>
 
 
 </body>
+
 </html>
